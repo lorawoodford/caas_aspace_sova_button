@@ -54,6 +54,10 @@
       <% end %>
 
       <% if ['archival_object'].include?(record.jsonmodel_type) %>
+        <%= link_to t('view_in_sova'), parent_link, :class => "btn btn-sm btn-default" %>
+      <% end %>
+
+      <% if ['archival_object'].include?(record.jsonmodel_type) %>
         <div class="btn-group dropdown" id="other-dropdown">
           <button
             class="btn btn-sm btn-default dropdown-toggle"
@@ -73,10 +77,6 @@
             <% end %>
           </ul>
         </div>
-      <% end %>
-
-      <% if ['archival_object'].include?(record.jsonmodel_type) %>
-        <%= link_to "View in SOVA", parent_link, :class => "btn btn-sm btn-primary" %>
       <% end %>
 
       <% if suppressible && user_can?('suppress_archival_record') %>
