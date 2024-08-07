@@ -1,8 +1,13 @@
 module ToolbarHelper
-  def self.sova_link_from_resource(record)
-    identifier = [record[:id_0], record[:id_1], record[:id_2], record[:id_3]].compact.join(".").downcase
-    URI.join(
-      "https:://sova.si.edu/#{identifier}"
-    ).to_s
+  SOVA_URN = "sova.si.edu"
+
+  def self.sova_link_from_record(record_id, record_type)
+    path = record_id.downcase
+    if record_type == 'archival_object'
+      path.gsub!('_', '/')
+    end
+
+    File.join('/record/',
+              path)
   end
 end
