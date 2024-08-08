@@ -1,6 +1,7 @@
 # CAAS Aspace SOVA Button Plugin
 
 Adds a "View in SOVA" button to resources and archival objects when the resource finding aid status field is "publish."
+
 <img width="700" alt="Screenshot 2024-08-08 at 2 19 00 PM" src="https://github.com/user-attachments/assets/55e21118-2c65-4848-bac3-ad9828be1024">
 
 ## Tests
