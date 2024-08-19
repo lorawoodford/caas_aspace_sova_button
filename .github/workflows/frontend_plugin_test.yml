@@ -44,7 +44,7 @@ jobs:
 
     - name: Copy plugin to ArchivesSpace
       run: |
-        cp ./sova_plugin ./plugins
+        cp -r ./sova_plugin ./plugins
 
     - name: Allow ArchivesSpace functions for app db user
       env:
