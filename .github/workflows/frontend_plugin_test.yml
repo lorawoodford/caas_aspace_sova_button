@@ -41,7 +41,7 @@ jobs:
     - name: Copy plugin to ArchivesSpace
       run: |
         ls plugins/
-        cp -r ./sova_plugin ${{ github.workspace }}/plugins
+        cp -r ${{ github.workspace }}/sova_plugin ${{ github.workspace }}/plugins
       
     - uses: actions/setup-java@v1
       with:
@@ -66,4 +66,4 @@ jobs:
 
     - name: Run Frontend plugin tests
       run: |
-        ./build/run frontend:selenium -Dspec="${{ github.workspace }}/plugins"
+        ./build/run frontend:selenium -Dspec="../../plugins"
