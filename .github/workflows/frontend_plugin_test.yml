@@ -1,14 +1,6 @@
 name: Frontend Plugin Testing
 
-on:
-  pull_request:
-    branches:
-      - main
-    paths:
-    - 'frontend/**'
-  push:
-    paths:
-      - '*'
+on: ['push']
 
 jobs:
   frontend_plugins:
