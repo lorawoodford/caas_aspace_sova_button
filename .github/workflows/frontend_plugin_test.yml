@@ -40,7 +40,11 @@ jobs:
     - name: Checkout plugin
       uses: actions/checkout@v4
       with:
-        path: ./plugins
+        path: sova_plugin
+
+    - name: Copy plugin to ArchivesSpace
+      run: |
+        cp ./sova_plugin ./plugins
 
     - name: Allow ArchivesSpace functions for app db user
       env:
