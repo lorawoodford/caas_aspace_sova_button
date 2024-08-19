@@ -41,7 +41,7 @@ jobs:
     - name: Copy plugin to ArchivesSpace
       run: |
         cp -r ${{ github.workspace }}/caas_aspace_sova_button ${{ github.workspace }}/plugins
-        ls plugins/
+        ls plugins/caas_aspace_sova_button/
       
     - uses: actions/setup-java@v1
       with:
