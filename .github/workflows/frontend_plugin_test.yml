@@ -8,7 +8,7 @@ on:
     - 'frontend/**'
   push:
     paths:
-      - 'frontend/**'
+      - '*'
 
 jobs:
   frontend_plugins:
