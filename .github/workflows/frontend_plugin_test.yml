@@ -49,7 +49,7 @@ jobs:
     - name: Checkout ArchivesSpace
       uses: actions/checkout@v4
       with:
-        ref: SI-v3.3.1
+        ref: v3.3.1-for-test
         repository: lorawoodford/archivesspace
 
     - name: Checkout plugin
