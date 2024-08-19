@@ -36,11 +36,11 @@ jobs:
     - name: Checkout plugin
       uses: actions/checkout@v4
       with:
-        path: sova_plugin
+        path: caas_aspace_sova_button
 
     - name: Copy plugin to ArchivesSpace
       run: |
-        cp -r ${{ github.workspace }}/sova_plugin/caas_aspace_sova_button ${{ github.workspace }}/plugins
+        cp -r ${{ github.workspace }}/caas_aspace_sova_button ${{ github.workspace }}/plugins
         ls plugins/
       
     - uses: actions/setup-java@v1
