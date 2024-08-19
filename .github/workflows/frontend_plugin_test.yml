@@ -40,8 +40,8 @@ jobs:
 
     - name: Copy plugin to ArchivesSpace
       run: |
-        ls plugins/
         cp -r ${{ github.workspace }}/sova_plugin ${{ github.workspace }}/plugins
+        ls plugins/
       
     - uses: actions/setup-java@v1
       with:
