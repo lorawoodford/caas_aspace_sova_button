@@ -49,8 +49,8 @@ jobs:
     - name: Checkout ArchivesSpace
       uses: actions/checkout@v4
       with:
-        ref: v3.3.1-for-test
-        repository: lorawoodford/archivesspace
+        ref: ${{ env.PROD_ARCHIVESSPACE_VERSION }}
+        repository: Smithsonian/archivesspace
 
     - name: Checkout plugin
       uses: actions/checkout@v4
