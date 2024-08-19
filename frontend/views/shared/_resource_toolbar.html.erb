@@ -79,6 +79,7 @@
                                                           :target => record.title)}
         %>
       <% end %>
+
       <%# View in SOVA plugin start %>
       <% if record.finding_aid_status == 'publish' %>
         <%= link_to t('view_in_sova'),
@@ -86,6 +87,7 @@
                     { :class => "btn btn-sm btn-default", :target => "_blank" } %>
       <% end %>
       <%# View in SOVA plugin end %>
+
       <div class="btn-group dropdown" id="other-dropdown" style="display: none">
         <button class="btn btn-sm btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
           <%= I18n.t('actions.more') %>
