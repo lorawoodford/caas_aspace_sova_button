@@ -74,4 +74,4 @@ jobs:
 
     - name: Run Frontend plugin tests
       run: |
-        ./build/run frontend:test:plugin
+        ./build/run frontend:test:plugin -Dspec="../../plugins/${{ github.event.repository.name }}"
