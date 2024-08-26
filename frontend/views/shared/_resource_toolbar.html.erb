@@ -58,6 +58,13 @@
           <%= yield :exports %>
         </ul>
       </div>
+
+      <%# SNAC PLUGIN CONTENT SECTION STARTS HERE %>
+        <% if AppConfig[:plugins].include?('snac_aspace_plugin') %>
+          <%= render_aspace_partial :partial => "shared/snac_dropdown", :locals => {:obj => record} %>
+        <% end %>
+      <%# SNAC PLUGIN CONTENT SECTION ENDS HERE %>
+
       <% if user_can?('merge_archival_record') %>
         <%=
             render_aspace_partial :partial => "shared/merge_dropdown",

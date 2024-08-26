@@ -4,6 +4,16 @@ Adds a "View in SOVA" button to resources and archival objects when the resource
 
 <img width="700" alt="Screenshot 2024-08-08 at 2 19 00 PM" src="https://github.com/user-attachments/assets/55e21118-2c65-4848-bac3-ad9828be1024">
 
+## Using alongside other toolbar plugins (ex: SNAC plugin)
+
+Since this plugin overrides two shared toolbar partials - `shared/_component_toolbar.html.erb` and `shared/_resource_toolbar.html.erb` - it will conflict with plugins that also modify those views.  For the Smithsonian, this currently includes the 3rd-party [SNAC plugin](https://github.com/snac-cooperative/snac_aspace_plugin).  To address this, this plugin conditionally inserts the SNAC resource toolbar override if `snac_aspace_plugin` is present in `AppConfig`.  ASpace maintainers should be aware of this when upgrading ArchivesSpace, the SOVA plugin, and/or the SNAC plugin.
+
+For the above to work, the `caas_aspace_sova_button` must be loaded last, such as:
+
+```
+AppConfig[:plugins] = ['local', 'lcnaf', 'snac_aspace_plugin', 'some-other-plugin', 'caas_aspace_sova_button']
+```
+
 ## Tests
 
 Should be run from the archivesspace project root directory.
