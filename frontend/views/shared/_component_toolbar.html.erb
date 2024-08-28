@@ -62,7 +62,8 @@
           <%# View in SOVA plugin start %>
           <% if ['archival_object'].include?(record.jsonmodel_type) && JSONModel(:resource).find(parent_link[:id]).finding_aid_status == 'publish' %>
             <%= link_to t('view_in_sova'),
-                        URI::HTTPS.build(host: ToolbarHelper::SOVA_URN, path: ToolbarHelper::sova_link_from_record(record.ref_id, 'archival_object')).to_s,
+                        URI::HTTPS.build(host: ToolbarHelper::sova_base_domain(request.host),
+                                        path: ToolbarHelper::sova_link_from_record(record.ref_id, 'archival_object')).to_s,
                         { :class => "btn btn-sm btn-default", :target => "_blank" } %>
           <% end %>
           <%# View in SOVA plugin end %>
