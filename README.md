@@ -14,6 +14,16 @@ For the above to work, the `caas_aspace_sova_button` must be loaded last, such a
 AppConfig[:plugins] = ['local', 'lcnaf', 'snac_aspace_plugin', 'some-other-plugin', 'caas_aspace_sova_button']
 ```
 
+## Configuring SOVA environment
+
+To (optionally) configure the base SOVA URL (e.g. test or prod) add the following to your ArchivesSpace `config.yml`:
+
+```
+ AppConfig[:soval_url] = 'https://sova-test.si.edu/'
+```
+
+If no configuration setting is supplied, the system will fallback to the production SOVA URL defined in `caas_aspace_sova_button/frontend/plugin_init.rb`.
+
 ## Tests
 
 Should be run from the archivesspace project root directory.

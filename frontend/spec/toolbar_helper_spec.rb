@@ -23,22 +23,4 @@ describe ToolbarHelper do
       end
     end
   end
-
-  describe '#sova_base_domain' do
-    context 'when aspace url looks like SI production' do
-      let(:aspace_host) { 'aspace.myorg.edu' }
-
-      it "returns '/record/{downcased-eadid}'" do
-        expect(ToolbarHelper::sova_base_domain(aspace_host)).to eq('sova.si.edu')
-      end
-    end
-
-    context 'when aspace url looks like SI test' do
-      let(:aspace_host) { 'aspace-test.myorg.edu' }
-
-      it "returns '/record/{downcased-eadid}/{refid}'" do
-        expect(ToolbarHelper::sova_base_domain(aspace_host)).to eq('sova-test.si.edu')
-      end
-    end
-  end
 end
