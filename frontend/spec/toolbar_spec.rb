@@ -60,12 +60,14 @@ describe 'View in SOVA toolbar button', js: true do
   end
 
   before(:each) do
+    visit '/logout'
     login_admin
     select_repository(@repository)
   end
 
   context 'when finding aid status is not publish' do
     it 'does not show the button on the resource' do
+      visit '/'
       visit "resources/#{@unpublished_resource.id}"
       wait_for_ajax
 
@@ -73,6 +75,7 @@ describe 'View in SOVA toolbar button', js: true do
     end
 
     it 'does not show the button on a child archival object' do
+      visit '/'
       visit "resources/#{@unpublished_resource.id}/edit#tree::archival_object_#{@unpublished_resource_ao.id}"
 
       wait_for_ajax
@@ -87,6 +90,7 @@ describe 'View in SOVA toolbar button', js: true do
     end
 
     it 'shows the button with correct sova link on the resource' do
+      visit '/'
       visit "resources/#{@published_resource.id}/edit"
 
       expect(page).to have_text 'View in SOVA'
@@ -96,6 +100,7 @@ describe 'View in SOVA toolbar button', js: true do
     end
 
     it 'shows the button with correct sova link on a published child archival object' do
+      visit '/'
       visit "resources/#{@published_resource.id}/edit#tree::archival_object_#{@published_ao.id}"
 
       wait_for_ajax
@@ -107,6 +112,7 @@ describe 'View in SOVA toolbar button', js: true do
     end
 
     it 'does not show the button on an unpublished child archival object' do
+      visit '/'
       visit "resources/#{@published_resource.id}/edit#tree::archival_object_#{@unpublished_ao.id}"
 
       wait_for_ajax
