@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require "#{ASUtils.find_base_directory}/frontend/spec/spec_helper"
-require "#{ASUtils.find_base_directory}/frontend/spec/rails_helper"
+require 'spec_helper.rb'
+require 'rails_helper.rb'
 
 describe ToolbarHelper do
   describe '#sova_link_from_record' do

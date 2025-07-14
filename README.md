@@ -30,20 +30,20 @@ Should be run from the archivesspace project root directory.
 
 To run headless (default):
 ```
-./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/*"
+./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/features/*"
 ```
 
 To run headless with Chrome:
 ```
-SELENIUM_CHROME=true ./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/*"
+SELENIUM_CHROME=true ./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/features/*"
 ```
 
 To run heady with Chrome (chromedriver required):
 ```
-SELENIUM_CHROME=true CHROME_OPTS= ./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/*"
+SELENIUM_CHROME=true CHROME_OPTS= ./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/features/*"
 ```
 
 To run heady with Firefox (geckodriver required):
 ```
-FIREFOX_OPTS= ./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/*"
+FIREFOX_OPTS= ./build/run frontend:test -Dpattern="../../plugins/caas_aspace_sova_button/frontend/spec/features/*"
 ```
