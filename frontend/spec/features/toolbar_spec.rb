@@ -27,7 +27,7 @@ def add_enum
     run_index_round
 
     visit "resources/#{@published_resource.id}/edit"
-    select 'publish', from: 'Finding Aid Status'
+    find("#resource_finding_aid_status_ option[value='publish']").select_option
     within '#archivesSpaceSidebar' do
       click_on 'Save Resource'
     end
