@@ -14,7 +14,9 @@
 
 - [ ] ✔️ Have you assigned at least one reviewer?
 - [ ] 🔗 Have you referenced any issues this PR will close?
-- [ ] ⬇️ Have you merged the latest upstream changes into your branch? 
+- [ ] ⬇️ Have you merged the latest upstream changes into your branch?
+- [ ] ⁉️ If you have modified `frontend/views/shared/_resource_toolbar.html.erb`, have 
+pulled those changes into other plugins (e.g. [lassb-aspace-overrides](https://github.com/Smithsonian/lassb-aspace-overrides))?
 - [ ] 🧪 Have you added tests to cover these changes?  If not, why:
 
 - [ ] 🤖 Have automated checks (if any) passed?  If not, please explain for the reviewer:
